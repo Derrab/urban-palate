@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Urban Palate - Authentic East African dining experience in the heart of Nairobi" />
+  <title>Urban Palate | Authentic East African Cuisine</title>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">
+          <span class="logo-icon">🍽️</span>
+          <span class="logo-text">Urban Palate</span>
+        </a>
+
+        <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="siteNav" class="site-nav">
+          <ul class="nav-list">
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#reservations">Reservations</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-tag">Welcome to</span>
+        <h1 class="hero-title">Urban Palate</h1>
+        <p class="hero-subtitle">Authentic East African cuisine, crafted with love and tradition.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">Explore Menu</a>
+          <a href="#reservations" class="btn btn-outline">Book a Table</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MENU SECTION ===== -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Menu</h2>
+        <p class="section-subtitle">Discover the rich flavors of East Africa</p>
+      </div>
+
+      <!-- Filters rendered by app.js -->
+      <div id="menuFilters" class="menu-filters" role="tablist"></div>
+
+      <!-- Menu grid rendered by app.js -->
+      <div id="menuGrid" class="menu-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== RESERVATIONS SECTION ===== -->
+  <section id="reservations" class="reservations-section">
+    <div class="container">
+      <div class="reservations-grid">
+        <div class="reservations-info">
+          <span class="section-tag">Book Your Table</span>
+          <h2 class="section-title">Reserve Your Experience</h2>
+          <p class="section-subtitle">
+            Experience the warmth of East African hospitality. 
+            Reserve your table and let us take you on a culinary journey.
+          </p>
+          <ul class="info-list">
+               <li>🍽️ Open daily from 12:00 PM to 10:00 PM</li>
+    <li>📞 Call us: <a href="tel:+254728330852">+254 728 330 852</a></li>
+    <li>📞 Alternative: <a href="tel:+254700701937">+254 700 701 937</a></li>
+    <li>💬 WhatsApp: <a href="https://wa.me/254728330852" target="_blank">+254 728 330 852</a></li>
+    <li>📍 Location: Nairobi, Kenya</li>
+          </ul>
+        </div>
+
+        <div class="reservations-form-wrapper">
+          <form id="bookingForm" class="booking-form" novalidate>
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" placeholder="John Mwangi" required />
+              <span class="field-error" data-for="fullName"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="0712 345 678" required />
+              <span class="field-error" data-for="phone"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Date *</label>
+                <input type="date" id="date" name="date" required />
+                <span class="field-error" data-for="date"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="time">Time *</label>
+                <select id="time" name="time" required>
+                  <option value="">Select time</option>
+                </select>
+                <span class="field-error" data-for="time"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="guests">Number of Guests *</label>
+                <select id="guests" name="guests" required>
+                  <option value="">Select guests</option>
+                  <option value="1">1 Guest</option>
+                  <option value="2">2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5">5 Guests</option>
+                  <option value="6">6 Guests</option>
+                  <option value="7">7 Guests</option>
+                  <option value="8">8 Guests</option>
+                  <option value="9">9 Guests</option>
+                  <option value="10">10+ Guests</option>
+                </select>
+                <span class="field-error" data-for="guests"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="occasion">Occasion (Optional)</label>
+                <select id="occasion" name="occasion">
+                  <option value="">Select occasion</option>
+                  <option value="birthday">Birthday</option>
+                  <option value="anniversary">Anniversary</option>
+                  <option value="business">Business Dinner</option>
+                  <option value="date">Date Night</option>
+                  <option value="family">Family Gathering</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="notes">Special Requests (Optional)</label>
+              <textarea id="notes" name="notes" rows="3" placeholder="Dietary restrictions, seating preferences, etc."></textarea>
+            </div>
+
+            <button type="submit" id="bookingSubmit" class="btn btn-primary btn-full">
+              <span class="btn-label">Confirm Reservation</span>
+            </button>
+
+            <div id="formStatus" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="section-tag">Our Story</span>
+          <h2 class="section-title">Where Tradition Meets Innovation</h2>
+          <p>
+            Urban Palate brings the vibrant flavors of East Africa to the heart of Nairobi. 
+            Our chefs combine traditional recipes with modern techniques, creating dishes that 
+            honor our heritage while embracing innovation.
+          </p>
+          <p>
+            Every ingredient is carefully sourced from local farmers and markets, ensuring 
+            freshness and supporting our community. From our signature Nyama Choma to our 
+            handcrafted cocktails, every dish tells a story of East African culinary excellence.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Years of Excellence</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Authentic Dishes</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Fresh Ingredients</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop" alt="Urban Palate restaurant interior" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">Visit Us</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <h3>Location</h3>
+          <p>Nairobi, Kenya</p>
+          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">View on Map →</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📞</div>
+          <h3>Phone</h3>
+          <p><a href="tel:+254700000000">+254 728330852</a></p>
+          <p><a href="tel:+254701234567">+254 700701937</a></p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📧</div>
+          <h3>Email</h3>
+          <p><a href="mailto:info@urbanpalate.co.ke">info@urbanpalate.co.ke</a></p>
+          <p><a href="mailto:reservations@urbanpalate.co.ke">reservations@urbanpalate.co.ke</a></p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🕐</div>
+          <h3>Hours</h3>
+          <p>Mon - Sun: 12:00 PM - 10:00 PM</p>
+          <p>Reservations recommended</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-text">Urban Palate</span>
+          <p>Authentic East African cuisine in the heart of Nairobi.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#reservations">Reservations</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="Facebook">👍</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="TikTok">🎵</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Urban Palate. All rights reserved.</p>
+        <p class="footer-credit">Crafted with ❤️ in Kenya</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script src="app.js"></script>
+</body>
+</html>
