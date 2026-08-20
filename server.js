@@ -1,11 +1,12 @@
-const app = require('./src/app');
+ const app = require('./src/app');
 
 const PORT = process.env.PORT || 3000;
 
 const server = app.listen(PORT, () => {
   console.log(`🍽️  Urban Palate Server Running`);
   console.log(`📍 http://localhost:${PORT}`);
-  console.log(`📱 WhatsApp Provider: ${process.env.WHATSAPP_PROVIDER || 'twilio'}`);
+  console.log(`📁 Public folder: ${__dirname}/public`);
+  console.log(`📱 WhatsApp Provider: ${process.env.WHATSAPP_PROVIDER || 'callmebot'}`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
 });
 

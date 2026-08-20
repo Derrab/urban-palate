@@ -1,4 +1,4 @@
-const express = require('express');
+ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
@@ -14,16 +14,16 @@ app.use(helmet());
 
 // Rate limiting
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // limit each IP to 100 requests per windowMs
+  windowMs: 15 * 60 * 1000,
+  max: 100,
   message: 'Too many requests from this IP, please try again later.'
 });
 app.use('/api', limiter);
 
 // CORS
 app.use(cors({
-  origin: '*', // ✅ Allow all origins for development
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'x-admin-key']
 }));
 
@@ -31,10 +31,16 @@ app.use(cors({
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 
-// Static files (frontend)
-app.use(express.static(path.join(__dirname, '../public')));
+// ✅✅✅ IMPORTANT: Serve static files from the 'public' directory
+// This MUST be BEFORE any routes or the 404 handler
+const publicPath = path.join(__dirname, '../public');
+console.log('📁 Serving static files from:', publicPath);
+app.use(express.static(publicPath));
 
-// Routes
+// ✅ Also serve images specifically (redundant but ensures it works)
+app.use('/images', express.static(path.join(publicPath, 'images')));
+
+// Routes - API routes
 app.use('/api/bookings', bookingRoutes);
 
 // Health check
@@ -47,12 +53,12 @@ app.get('/health', (req, res) => {
   });
 });
 
-// Root route
+// ✅ Root route - serve index.html
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
+  res.sendFile(path.join(publicPath, 'index.html'));
 });
 
-// 404 handler
+// ✅ 404 handler - this should be LAST
 app.use((req, res) => {
   res.status(404).json({ error: 'Route not found' });
 });

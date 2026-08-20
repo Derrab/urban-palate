@@ -25,7 +25,7 @@ const MENU = [
     cat: "starters", 
     price: 150,
     desc: "Tomato, red onion, chili and coriander, cut fine and dressed at the table.",
-    image: "https://i.pinimg.com/1200x/09/bd/c3/09bdc35ee87741883548fed508277128.jpg"
+    image: "/public/images/kachumbari.jpg"
   },
   { 
     id: "mutura", 
@@ -33,7 +33,7 @@ const MENU = [
     cat: "starters", 
     price: 300,
     desc: "Kenyan smoked sausage of beef and offal, grilled and sliced thin.",
-    image: "https://i.pinimg.com/1200x/4a/bd/b7/4abdb700664e9907699e32394061ed10.jpg"
+    image: "/images/mutura.jpg"
   },
   { 
     id: "samosa", 
@@ -41,7 +41,7 @@ const MENU = [
     cat: "starters", 
     price: 450,
     desc: "Hand-folded pastry, spiced minced beef, tamarind dip.",
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=300&fit=crop&crop=center"
+    image: "/images/samosa.jpg"
   },
   { 
     id: "nyama-choma", 
@@ -49,7 +49,7 @@ const MENU = [
     cat: "grill", 
     price: 1800,
     desc: "Char-grilled goat over acacia coals, dry-rubbed, served on the bone.",
-    image: "https://i.pinimg.com/1200x/c2/43/20/c24320edec80b359656d5f7c8633e0ea.jpg"
+    image: "/images/nyama-choma.jpg"
   },
   { 
     id: "mbuzi-choma", 
@@ -57,7 +57,7 @@ const MENU = [
     cat: "grill", 
     price: 2200,
     desc: "Slow-roasted goat ribs, finished hot over open flame.",
-    image: "https://i.pinimg.com/1200x/cd/fa/e2/cdfae26405838287a0871afc777f2b38.jpg"
+    image: "/images/mbuzi-choma.jpg"
   },
   { 
     id: "kuku-choma", 
@@ -65,7 +65,7 @@ const MENU = [
     cat: "grill", 
     price: 1500,
     desc: "Half chicken, citrus-and-chili marinade, grilled to order.",
-    image: "https://i.pinimg.com/736x/7d/f6/72/7df67256764a8cdb2eaf8dae917814c3.jpg"
+    image: "/images/kuku-choma.jpg"
   },
   { 
     id: "samaki-kupaka", 
@@ -73,7 +73,7 @@ const MENU = [
     cat: "mains", 
     price: 1600,
     desc: "Coastal tilapia simmered in coconut and tomato, coriander.",
-    image: "https://i.pinimg.com/736x/4e/4d/50/4e4d50624fd882cfa4c2b3eafce2528b.jpg"
+    image: "/images/samaki wa kupaka.jpg"
   },
   { 
     // ✅ FIXED: Removed space in ID
@@ -82,7 +82,7 @@ const MENU = [
     cat: "mains", 
     price: 1500,
     desc: "Chicken curry with Swahili spices, slow-cooked to perfection.",
-    image: "https://i.pinimg.com/736x/9f/a3/fb/9fa3fb041dcb9d3166e6e8fdc1996d96.jpg"
+    image: "/images/chicken-curry.jpg"
   },
   { 
     id: "pilau", 
@@ -90,7 +90,7 @@ const MENU = [
     cat: "mains", 
     price: 1200,
     desc: "Spiced rice slow-cooked with beef, clove, cardamom, cumin.",
-    image: "https://i.pinimg.com/736x/d4/f7/45/d4f745d7aae3229f4249e9e9c2f3dc42.jpg"
+    image: "/images/pilau.jpg"
   },
   { 
     id: "biryani", 
@@ -98,7 +98,7 @@ const MENU = [
     cat: "mains", 
     price: 1400,
     desc: "Layered saffron rice, marinated chicken, crisp fried onion.",
-    image: "https://i.pinimg.com/736x/46/e2/c0/46e2c0a38a6ce0b7e65e6b1dc7243453.jpg"
+    image: "/images/biryani.jpg"
   },
   { 
     id: "githeri", 
@@ -106,7 +106,7 @@ const MENU = [
     cat: "mains", 
     price: 300,
     desc: "Maize and bean stew. Ask for the vegetarian pot.",
-    image: "https://i.pinimg.com/736x/45/9b/b4/459bb44ec18a3d4d8003b3f5c6b31a08.jpg"
+    image: "/images/githeri.jpg"
   },
   { 
     // ✅ FIXED: Removed veg:true since it has meat (nyama)
@@ -115,7 +115,7 @@ const MENU = [
     cat: "sides", 
     price: 500,
     desc: "Mashed potato, maize, pumpkin leaf and green banana, served with beef stew.",
-    image: "https://i.pinimg.com/736x/60/c1/77/60c177fc1892db33e04a0b2c4472a847.jpg"
+    image: "/images/mukimo.jpg"
   },
   { 
     // ✅ FIXED: Removed space in ID and veg:true since it has beef
@@ -124,7 +124,7 @@ const MENU = [
     cat: "sides", 
     price: 600,
     desc: "Maize meal with garlic-sautéed collard greens, served with beef stew.",
-    image: "https://i.pinimg.com/1200x/60/3b/c9/603bc9e27623565886979dbc3e0e3fa1.jpg"
+    image: "/images/ugali-sukuma-beef stew.jpg"
   },
   { 
     id: "matoke", 
@@ -132,7 +132,7 @@ const MENU = [
     cat: "sides", 
     price: 600, 
     desc: "Green bananas braised in coconut milk and mild spice.",
-    image: "https://i.pinimg.com/1200x/73/b4/b1/73b4b162796e4e7fdb2ca45dcf6efa61.jpg"
+    image: "/images/matoke.jpg"
   },
   { 
     id: "doughnuts", 
@@ -140,7 +140,7 @@ const MENU = [
     cat: "desserts", 
     price: 350, 
     desc: "Coconut doughnuts, cardamom-spiced Kenyan tea.",
-    image: "https://i.pinimg.com/1200x/41/2d/49/412d491c7066deb0a0adf5c460008363.jpg"
+    image: "/images/doughnuts and chai.jpg"
   },
   { 
     id: "kaimati", 
@@ -148,7 +148,7 @@ const MENU = [
     cat: "desserts", 
     price: 400, 
     desc: "Sweet fried dumplings soaked in cardamom syrup.",
-    image: "https://i.pinimg.com/736x/36/b4/0f/36b40f1756dc91f784e05ce26494caf2.jpg"
+    image: "/images/kaimati.jpg"
   },
   { 
     id: "dawa", 
@@ -156,7 +156,7 @@ const MENU = [
     cat: "drinks", 
     price: 900,
     desc: "Honey, lime and vodka, muddled tableside. The classic 'medicine.'",
-    image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&h=300&fit=crop&crop=center"
+    image: "/images/dawa.jpg"
   },
   { 
     id: "tamarind-tea", 
@@ -164,7 +164,7 @@ const MENU = [
     cat: "drinks", 
     price: 350, 
     desc: "Tamarind, ginger and mint, served long over ice. Non-alcoholic.",
-    image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&h=300&fit=crop&crop=center"
+    image: "/images/tamarind-tea.jpg"
   }
 ];
 
