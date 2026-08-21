@@ -73,7 +73,7 @@ const MENU = [
     cat: "mains", 
     price: 1600,
     desc: "Coastal tilapia simmered in coconut and tomato, coriander.",
-    image: "/public/images/samaki wa kupaka.jpg"
+    image: "/public/images/samaki-wa-kupaka.jpg"
   },
   { 
     // ✅ FIXED: Removed space in ID
@@ -124,7 +124,7 @@ const MENU = [
     cat: "sides", 
     price: 600,
     desc: "Maize meal with garlic-sautéed collard greens, served with beef stew.",
-    image: "/public/images/ugali-sukuma-beef stew.jpg"
+    image: "/public/images/ugali-sukuma-beef-stew.jpg"
   },
   { 
     id: "matoke", 
@@ -140,7 +140,7 @@ const MENU = [
     cat: "desserts", 
     price: 350, 
     desc: "Coconut doughnuts, cardamom-spiced Kenyan tea.",
-    image: "/public/images/doughnuts and chai.jpg"
+    image: "/public/images/doughnuts-and-chai.jpg"
   },
   { 
     id: "kaimati", 
